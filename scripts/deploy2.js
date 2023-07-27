@@ -1,8 +1,8 @@
 const { ethers, upgrades } = require("hardhat");
 
 async function main() {
-    const MintNFT_V1 = await ethers.getContractFactory("MintNFT_V1");
-    const mintNFT = await upgrades.deployProxy(MintNFT_V1, [], {initializer: 'initialize'});
+    const MintNFT_V2 = await ethers.getContractFactory("MintNFT_V2");
+    const mintNFT = await upgrades.deployProxy(MintNFT_V2, [], {initializer: 'initialize'});
 
     await mintNFT.deployed();
 
